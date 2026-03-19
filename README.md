@@ -1,4 +1,4 @@
-#  AI Recipe Generator (Ingredient-Based)
+#  AI Recipe Generator (Ingredient-Based) [live](https://cookbott.streamlit.app/)
 
 An interactive web app that generates complete recipes based on ingredients you provide. Built using **LangChain**, **Hugging Face LLMs**, and **Streamlit**, this project turns your available ingredients into delicious, structured recipes instantly.
 
