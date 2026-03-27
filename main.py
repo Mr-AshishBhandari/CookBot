@@ -28,6 +28,10 @@ Respond in **clear, structured text** that a user can immediately follow to cook
                                )
 history = []
 
+st.header("Cook Bot")
+
+st.subheader("Tell us what’s in your fridge, and we’ll cook up the perfect recipe for you.")
+
 if "history" not in st.session_state:
     st.session_state.history = [system_message]
 
