@@ -31,6 +31,12 @@ history = []
 if "history" not in st.session_state:
     st.session_state.history = [system_message]
 
+for msg in st.session_state.history:
+    if msg.type == 'system':
+        continue
+    with st.chat_message(msg.type):
+        st.write(msg.content)
+    
 
 prompt = st.chat_input("Your message ...")
 
@@ -41,6 +47,11 @@ if prompt:
 
     st.session_state.history.append(AIMessage(content=result.content))
 
-    st.write(result.content)
+    with st.chat_message("user"):
+        st.write(prompt)
 
-    # st.write(st.session_state)
+    
+    with st.chat_message("assistant"):
+        st.write(result.content)
+
+    
